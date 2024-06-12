@@ -1,0 +1,58 @@
+<style>
+/* GMAIL 
+======== */
+ u + .body .gmail {
+    }
+/* Target all Gmail and Inbox versions (Webmail, iOS, Android). 
+In order to implement this technique your markup must contain
+1) A DOCTYPE.
+2) A body with a class name (ie. “body”)
+3) An element with a class name (ie. “gmail”) 
+https://freshinbox.com/blog/targeting-new-gmail-css/
+Warning: This does not work for GANGA (Gmail Android with a Non Gmail Account)
+https://litmus.com/community/discussions/7819-gmail-u-body-targeting-hack-now-redundant
+*/
+
+/* GMAIL (short cut)
+==================== */ 
+u ~ .body .gmail {
+}
+/* you can use this shortcut that does not require adding a class to the body of your email. 
+However this technique requires that you NOT use the <u> tag anywhere in your email content. 
+https://freshinbox.com/blog/targeting-new-gmail-css/
+Warning: This does not work for GANGA (Gmail Android with a Non Gmail Account)
+https://litmus.com/community/discussions/7819-gmail-u-body-targeting-hack-now-redundant
+*/
+
+/* GMAIL ON ANDROID
+=================== */
+div > u + .body .gmail {
+} 
+/*The CSS below allows you to target Gmail on Android (excludes Inbox).
+In order to implement this technique your markup must contain
+1) A DOCTYPE.
+2) A body with a class name (ie. “body”)
+3) An element with a class name (ie. “gmail”) 
+https://freshinbox.com/blog/targeting-new-gmail-css/
+Warning: This does not work for GANGA (Gmail Android with a Non Gmail Account)
+https://litmus.com/community/discussions/7819-gmail-u-body-targeting-hack-now-redundant
+*/
+
+/* GMAIL ON ANDROID (short cut)
+=============================== */
+div > u ~ div .gmail {
+}
+/*  Like the generic version, you can use a shortcut that does not require adding a class name to the body as well. 
+https://freshinbox.com/blog/targeting-new-gmail-css/
+Warning: This does not work for GANGA (Gmail Android with a Non Gmail Account)
+https://litmus.com/community/discussions/7819-gmail-u-body-targeting-hack-now-redundant
+*/
+
+/* INBOX by GMAIL ONLY 
+====================== */
+u + .body > .inbox {
+}
+/* https://freshinbox.com/blog/targeting-new-gmail-css/ 
+Warning: This does not work for GANGA (Gmail Android with a Non Gmail Account)
+*/
+</style> 
